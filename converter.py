@@ -1,23 +1,24 @@
-
 # import OS module
 import os
- 
-# Get the list of all files and directories
-path = "C:\\Users\\...\\Images" # Example Path
-linpath = "c:/Users/.../Images" # Example Path
-files = os.listdir(path)
- 
-
-# importing the module
+# import necessary libraries
 from PIL import Image
 from pillow_heif import register_heif_opener
 
+# Get the list of all files and directories
+windows_type_path = "C:\\Users\\...\\Images" # Example Path
+linux_type_path = "c:/Users/.../Images" # Example Path
+
+## WINDOWS USERS COMMENT THE LINE BELOW
+linux_type_path = windows_type_path
+
+# Get files
+files = os.listdir(path)
 register_heif_opener()
-import os
-# im = Image.open("c:/Users/.../IMG_8223.heic")
+
 for file in files: 
-# importing the image 
+		# import the image 
     im = Image.open(linpath+file)
+		# remove the old file
     os.remove(linpath+file)
     rgb_im = im.convert("RGB")
     rgb_im.save(linpath+file.split('.')[0]+'.jpg')

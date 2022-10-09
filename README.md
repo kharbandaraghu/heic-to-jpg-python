@@ -6,12 +6,9 @@
 ## Requirements to run
 - Python3 installed on your system 
 
-## Instructions
-
-### 1. Install Libraries
+## Required Libraries
 - [Pillow](https://pypi.org/project/Pillow/)
 - [Pillow HEIF](https://pypi.org/project/pillow-heif/)
 
-### 2. Update path in converter.py
-You will need to update 2 path variables in converter.py; Example paths are listed.
-
+## Instructions
+The instruciton to set up the project can be found [HERE](https://vulcancoder.com/blog/convert-your-photos-from-heic-to-jpg-in-batch-for-free-using-python)
